@@ -1,0 +1,21 @@
+/* Header */
+#header {
+  display: flex;
+  background: orange;
+  padding: 30px 20px;
+
+  .logo  {
+    h1 {
+      margin: 3px 0;
+    }
+    .subtitle {
+      font-size: 0.8rem;
+    }
+  }
+  .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

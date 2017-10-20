@@ -1,0 +1,59 @@
+#content {
+  display: flex;
+  margin-top: 20px;
+  table {
+    width: 100%;
+  }
+  table td {
+    padding: 5px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+  }
+
+  /* Left Section */
+  .left-section {
+    flex: 1;
+    margin-right: 20px;
+    .header {
+      display: flex;
+      height: 30px;
+      button {
+        height: 25px;
+      }
+      &>.actions {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  table th {
+    background: #ccc;
+    padding: 5px;
+  }
+  .totals td {
+    border-top: 3px solid #ccc;
+  }
+
+  .legend {
+    width: 30px;
+    height: 16px;
+  }
+
+  /* Right Section */
+  .right-section {
+    width: 300px;
+    background: #ccc;
+    .chart {
+      height: 300px;
+    }
+    .help-label {
+      padding: 10px;
+    }
+  }
+}

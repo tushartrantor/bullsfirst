@@ -1,0 +1,13 @@
+.myapp {
+  font-size: 14px;
+  font-family: "Helvetica Neue", "Arial", "sans-serif";
+  max-width: 1000px;
+  margin: 0 auto;
+  button {
+    width: 100px;
+    background: orange;
+    border: 1px solid darkred;
+    margin-right: 10px;
+    box-shadow: 1px 1px 3px #333;
+  }
+}

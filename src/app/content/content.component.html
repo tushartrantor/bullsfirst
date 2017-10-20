@@ -1,0 +1,52 @@
+<!-- Content -->
+<div id="content">
+  <!-- Left Section -->
+  <div class="left-section">
+    <!-- Header -->
+    <div class="header">
+      <strong>Accounts</strong>
+
+      <div class="actions">
+        <button class="add-account-btn" (click)="addAccount()">Add Account</button>
+        <button class="refresh-btn" (click)="refresh()">Refresh</button>
+      </div>
+    </div> <!--Ends: Header -->
+
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Market Value</th>
+        <th>Cash</th>
+        <th>Legend</th>
+      </tr>
+
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.name }}</td>
+        <td>{{ account.marketValue | currency:'USD':true }}</td>
+        <td>{{ account.cash | currency:'USD':true }}</td>
+        <td>
+          <div class="legend" [ngStyle]="{'background-color':account.legend}"></div>
+        </td>
+      </tr>
+
+      <!-- Totals -->
+      <tr class="totals">
+        <td></td>
+        <td>
+          <strong class="total-market-value">{{ totals.marketValue | currency:'USD':true }}</strong>
+        </td>
+        <td>
+          <strong class="total-cash">{{ totals.cash | currency:'USD':true }}</strong>
+        </td>
+        <td></td>
+      </tr> <!--Ends: Totals -->
+    </table>  <!--Ends: Table -->
+  </div> <!--Ends: Left Section -->
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <img class="chart" src="assets/bullsfirst/chart.png" alt="Chart">
+    <div class="help-label">Click on an account to view positions</div>
+  </div> <!--Ends: Right Section -->
+</div>
